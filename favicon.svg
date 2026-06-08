@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#f8efe6"/>
+  <!-- Stylised six-petal blossom -->
+  <g transform="translate(32 32)" fill="#c14b6a">
+    <circle cx="0" cy="-11" r="6"/>
+    <circle cx="9.5" cy="-5.5" r="6"/>
+    <circle cx="9.5" cy="5.5" r="6"/>
+    <circle cx="0" cy="11" r="6"/>
+    <circle cx="-9.5" cy="5.5" r="6"/>
+    <circle cx="-9.5" cy="-5.5" r="6"/>
+    <circle cx="0" cy="0" r="4" fill="#e8b651"/>
+  </g>
+</svg>
