@@ -192,6 +192,7 @@ button{font:inherit;background:none;border:0;color:inherit;cursor:pointer}
   0%,92%,100%{transform:scaleY(1)}
   94%,98%{transform:scaleY(.08)}
 }
+@media (max-width:640px){.champa{display:none}}
 
 /* =============================================================
    TOPBAR — status pill · lotus monogram · contact pill
@@ -675,7 +676,7 @@ button{font:inherit;background:none;border:0;color:inherit;cursor:pointer}
   padding:6px 10px; border:1px dashed var(--rule-strong); display:inline-block; margin-top:16px; transform:rotate(-2deg);
 }
 .foot .credit{grid-column:1/-1; margin-top:48px; padding-top:24px; border-top:1px solid var(--rule); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-soft)}
-@media (max-width:780px){.foot-inner{grid-template-columns:1fr; gap:32px}}
+@media (max-width:780px){.foot-inner{grid-template-columns:1fr; gap:32px} .foot a{padding:10px 0; min-height:44px; box-sizing:border-box} .foot p{padding:8px 0}}
 
 /* =============================================================
    LIGHTBOX
@@ -687,8 +688,8 @@ button{font:inherit;background:none;border:0;color:inherit;cursor:pointer}
 .lightbox.show{display:flex}
 .lightbox img{max-width:96vw; max-height:88vh; object-fit:contain; box-shadow:0 28px 80px rgba(0,0,0,.5)}
 .lightbox .close{
-  position:fixed; top:24px; right:28px; padding:10px 16px; border-radius:99px;
-  background:var(--jasmine); color:var(--ink); font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; cursor:pointer;
+  position:fixed; top:18px; right:18px; min-width:44px; min-height:44px; padding:13px 18px; border-radius:99px;
+  background:var(--jasmine); color:var(--ink); font-family:var(--mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;
 }
 
 /* =============================================================
@@ -1508,12 +1509,6 @@ html.js-reveal-armed .reveal.in{opacity:1; transform:none}
   $$('.lb').forEach(b => b.addEventListener('click', e => { e.stopPropagation(); lbImg.src = b.dataset.src; lb.classList.add('show'); }));
   lb.addEventListener('click', closeLb);
   $('#lbClose')?.addEventListener('click', e => { e.stopPropagation(); closeLb(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
-})();
-</script>
-</body>
-</html>
-ation(); closeLb(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
 })();
 </script>
