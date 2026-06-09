@@ -395,11 +395,13 @@ button{font:inherit;background:none;border:0;color:inherit;cursor:pointer}
 .specimen:hover .sprig{transform:rotate(12deg) translateY(-4px)}
 
 @media (max-width:880px){
-  .hero{grid-template-columns:minmax(0,1fr); padding-top:88px; min-height:auto; gap:48px; overflow:hidden}
+  .hero{grid-template-columns:minmax(0,1fr); padding-top:88px; min-height:auto; gap:36px; overflow:hidden}
   .hero-text,.specimen{min-width:0; max-width:100%}
+  /* photo first on mobile — user sees the specimen card immediately */
+  .specimen{order:-1; aspect-ratio:.92/1; transform:rotate(-1deg); min-height:340px; max-height:62vh}
+  .hero-text{order:0}
   .wordmark{font-size:clamp(46px,12.5vw,90px)}
   .hero-deck{font-size:clamp(17px,4.4vw,22px); max-width:none}
-  .specimen{aspect-ratio:.92/1; transform:rotate(-1deg); min-height:380px}
   .specimen .sprig{width:84px; height:84px; top:-18px; right:6px; transform:rotate(14deg)}
   .hero-meta{gap:14px 22px; font-size:10.5px}
 }
